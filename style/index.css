@@ -1,0 +1,76 @@
+/*colocando cor de fundo no cabeçalho*/
+header {
+    background-color: #006BCC;
+    font-family: montserrat, sans-serif; /*fonte do cabeçalho*/
+    color: #ffffff; /*cor do texto do cabeçalho*/
+}
+nav a{
+    color: #ffffff; /*cor dos links do menu*/
+    text-decoration: none; /*removendo sublinhado dos links*/
+    margin: 0 10px; /*espaçamento entre os links*/
+    text-align: center; /*alinhando o texto dos links ao centro*/
+}
+nav{
+text-align: center; /*alinhamento do texto dos links */
+border-color: #ffffff; /*cor da borda do menu de navegação*/
+border-width: 2px; /*largura da borda do menu de navegação*/
+border-style: solid; /*estilo da borda do menu de navegação*/
+padding: 10px; /*distância entre as bordas do menu de navegação */
+}
+
+.logo img {
+    width: 200px; /*tamanho da imagem do logo*/
+    height: 200px/*manter proporção da imagem do logo*/
+}
+
+/*configurando a caixa de pesquisa*/
+.caixa-pesquisa input {
+    padding: 5px; /*distância entre as bordas do campo de pesquisa*/
+    border: 1px solid #ccc; /*adicionando borda da campo de pesquisa*/
+    border-radius: 5px; /*arredondamento das bordas do campo de pesquisa*/
+    font-family: montserrat, sans-serif; /*fonte da campo de pesquisa*/
+    width: 400px; /*largura da campo de pesquisa*/
+    height: 30px; /*altura da campo de pesquisa*/
+    padding-left: 50px; 
+   
+}
+
+/*configurando a div da pesquisa*/
+.caixa-pesquisa {
+    display: flex;/*exine oos elementos em linha*/
+    justify-content: center; /*alinhamento horizontal dos elementos*/
+    margin-top: 20px; /*margem superiorda caixa de pesquisa*/
+    margin-bottom: 20px; /*margem inferior da caixa de pesquisa*/ 
+    position: relative; /*posição relativa para posicionar o ícone de pesquisa*/
+    
+}
+
+/*alinhar as divs do cabeçalho*/
+.topo {
+    display: flex; /*exibe os elementos em linha*/
+    align-items: center; /*alinhamento vertical dos elementos*/
+    justify-content: space-between; /*alinhamento horizontal dos elementos do cabeçalho*/
+    /*distribuição dos elementos com espaço entre eles*/
+
+}
+
+/*configurando os icones*/
+.caixa-pesquisa img{
+    width: 20px; /*tamanho do ícone de pesquisa*/
+    height: 20px; /*manter proporção do ícone de pesquisa*/
+    position: absolute; /*posição absoluta para posicionar o ícone de pesquisa*/
+    left: 10px; /*distância do ícone de pesquisa para a esquerda */
+    top: 50%; /*alinhamento vertical do ícone de pesquisa*/
+ transform: translateY(-50%); /*centralizando o ícone de pesquisa verticalmente*/
+}
+.caixa-pesquisa placeholder{
+    padding-left: 30px;
+    /*distancia entre o texto do placeholder e o icone de pesquisa*/
+}
+
+.icones a img{  
+    height: 35px; /*altura dos ícones de redes sociais*/
+    width: 35px; /*largura dos ícones de redes sociais*/
+    margin-right: 20px;
+    /* distância entre os ícones de usuario e carrinho ao lado direito*/
+}
