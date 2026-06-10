@@ -73,4 +73,50 @@ padding: 10px; /*distância entre as bordas do menu de navegação */
     width: 35px; /*largura dos ícones de redes sociais*/
     margin-right: 20px;
     /* distância entre os ícones de usuario e carrinho ao lado direito*/
+    grid-row: 1 / span 3; /*ocupa as duas linhas da grade para alinhar os icones verticalmente*/
+}
+
+/*configurando o texto dos icones de usuario e carrinho*/
+.icones a small{
+    font-size: 12px; /*tamanho da fonte do texto grande */
+    display: block; /*exibe o texto em uma nova linha*/
+    color: #ffffff; /*cor do texto grande*/
+    text-decoration: none; /*removendo sublinhado do texto pequeno*/
+    grid-column: 2; /*ocupa a segunda linha da grade para alinhar o texto ao lado direito*/
+    grid-row: 1; /*ocupa a primeira linha da grade para alinhar o texto verticalmente dos icones*/
+    margin: 0; /*remove a margem padrão do elemento small */
+
+}
+.icones a p{
+    font-size: 10px; /*tamanho da fonte do texto pequeno*/
+    display: block; /*exibe o texto em uma nova linha*/
+    color: #ffffff; /*cor do texto pequeno*/
+    grid-column: 2; /*ocupa a segunda linha da grade para alinhar o texto ao lado*/
+    grid-row: 2; /*ocupa a segunda linha da grade para alinhar o texto verticalmente dos icones*/
+    margin: 0; /*remove a margem padrão do elemento small */
+}
+.icones a{
+    text-decoration: none; /*removendo sublinhado dos links*/
+    display:grid; /*exibe os elementos em linha*/
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto;
+margin-right: 20px; /*distância entre os ícones de usuario e carrinho ao lado direito*/
+}
+/*configurando a div icones*/
+.icones {
+    display: flex; /*exibe os elementos em linha*/
+    align-items: center; /*alinhamento vertical dos elementos*/
+    gap: 30 px;/*distancia entre os elementos */
+    
+}
+
+/*configurando a área do banner*/
+.imagens-banner{
+    max-width: 2000px; /*largura máxima do banner*/
+}
+.banner {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+
 }
