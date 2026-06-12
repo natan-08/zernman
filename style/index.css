@@ -72,51 +72,91 @@ padding: 10px; /*distância entre as bordas do menu de navegação */
     height: 35px; /*altura dos ícones de redes sociais*/
     width: 35px; /*largura dos ícones de redes sociais*/
     margin-right: 20px;
-    /* distância entre os ícones de usuario e carrinho ao lado direito*/
-    grid-row: 1 / span 3; /*ocupa as duas linhas da grade para alinhar os icones verticalmente*/
 }
 
 /*configurando o texto dos icones de usuario e carrinho*/
 .icones a small{
-    font-size: 12px; /*tamanho da fonte do texto grande */
+    font-size: 10px; /*tamanho da fonte do texto grande */
     display: block; /*exibe o texto em uma nova linha*/
     color: #ffffff; /*cor do texto grande*/
-    text-decoration: none; /*removendo sublinhado do texto pequeno*/
-    grid-column: 2; /*ocupa a segunda linha da grade para alinhar o texto ao lado direito*/
-    grid-row: 1; /*ocupa a primeira linha da grade para alinhar o texto verticalmente dos icones*/
-    margin: 0; /*remove a margem padrão do elemento small */
-
 }
 .icones a p{
-    font-size: 10px; /*tamanho da fonte do texto pequeno*/
+    font-size: 12px; /*tamanho da fonte do texto pequeno*/
     display: block; /*exibe o texto em uma nova linha*/
     color: #ffffff; /*cor do texto pequeno*/
-    grid-column: 2; /*ocupa a segunda linha da grade para alinhar o texto ao lado*/
-    grid-row: 2; /*ocupa a segunda linha da grade para alinhar o texto verticalmente dos icones*/
-    margin: 0; /*remove a margem padrão do elemento small */
 }
 .icones a{
     text-decoration: none; /*removendo sublinhado dos links*/
-    display:grid; /*exibe os elementos em linha*/
-    grid-template-columns: 100px auto;
-    grid-template-rows: auto auto;
-margin-right: 20px; /*distância entre os ícones de usuario e carrinho ao lado direito*/
 }
 /*configurando a div icones*/
 .icones {
     display: flex; /*exibe os elementos em linha*/
     align-items: center; /*alinhamento vertical dos elementos*/
-    gap: 30 px;/*distancia entre os elementos */
+    gap: 30px;/*distancia entre os elementos */
     
 }
 
 /*configurando a área do banner*/
-.imagens-banner{
-    max-width: 2000px; /*largura máxima do banner*/
+.imagens-banner img{
+    display:block; /*exibe a imagem como bloco para remover espações em volta da imagem*/
+    width: 100%; /*Largura do banner */
+    height: auto; /*altura do banner */
+    /*ajusta a imagem para cobrir todo espaço do banner sem distorcer a imagem*/
 }
 .banner {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
+    width: 100vw; /*Largura do banner */
+    height: auto; /*altura do banner */
+    margin: 0; /*remove a margem padrão do banner*/
+    padding: 0; /*remove o padding padrão do banner*/
+}
+.imagens-banner {
+    width: 100%; /*Largura da div do banner */
+    position: relative; /*posição relativa para posicionar os botões do banner*/
+}
 
+/*
+.botoes-banner {
+    position: absolute; 
+   top: 70%; 
+    left: 20%; 
+}
+.btn-comprar{
+    background-color: #006BCC; 
+    color: #ffffff; 
+    border-radius: 5px;
+    font-family: montserrat, sans-serif; 
+    padding: 5px 10px; 
+
+}
+
+.btn-comprar:hover{
+    background-color: #0056a3; 
+    color: #ffffff; 
+} 
+.bnt-anterior, .btn-proximo{
+    background-color: #ffffff; 
+    color: #006BCC;
+    border-radius: 10px; 
+    font-family: montserrat, sans-serif; 
+    border: none; 
+    padding: 5px 20px;
+}
+.btn-anterior:hover, .btn-proximo:hover{
+    background-color: #006BCC; 
+    color: #ffffff; 
+    
+}
+*/
+
+.btn-comprar{
+    position: absolute;
+    top: 70%;       
+    left: 20%;
+    background-color: #006BCC;
+    color: #ffffff;
+    border-radius: 10px;
+    font-family: montserrat, sans-serif;
+    font-size: 18px;
+    padding: 5px 20px;
+    border: none;
 }
