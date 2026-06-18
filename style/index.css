@@ -160,3 +160,47 @@ padding: 10px; /*distância entre as bordas do menu de navegação */
     padding: 5px 20px;
     border: none;
 }
+.btn-anterior{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    background-color: transparent;
+    color: #006BCC;
+    border-radius: 50%;
+    font-family: montserrat, sans-serif;
+    font-size: 18px;
+    padding: 5px 20px;
+    border: none;
+}
+
+.btn-proximo{
+    position: absolute;
+    top: 38%;
+    left: 94%;
+    background-color: transparent;
+    color: #006BCC;
+    border-radius: 50%;
+    padding: 12px;
+    border: none;
+}
+
+.btn-comprar:hover{
+    background-color: #006BCC;
+    color: #ffffff;
+}/*configurações do rodapé*/
+
+footer{ 
+    background-color: #006BCC;/*cor de fundo*/
+    color: #ffffff;/*todos os textos na cor branca*/
+    font-family: poppins,sans-serif;/*tipo de fonte*/
+    padding: 10px;/*espaçamentos dentro do rodapé*/
+}
+
+.superior{
+    display: flex;/*permitir flexibilidade entre as colunas
+    gap:10px;/*espaçamento entre as divs*/
+    justify-content: space-between;
+    /*definir um tamanho igual entre as divs*/
+    /flex-wrap: wrap;
+    /*jogar  os textos para outra linha caso não possa caber na div /*
+}
