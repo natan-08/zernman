@@ -201,6 +201,7 @@ footer{
     gap:10px;/*espaçamento entre as divs*/
     justify-content: space-between;
     /*definir um tamanho igual entre as divs*/
-    /flex-wrap: wrap;
-    /*jogar  os textos para outra linha caso não possa caber na div /*
+    flex-wrap: wrap;
+    /*jogar  os textos para outra linha caso não possa caber na div*/
+
 }
