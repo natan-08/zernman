@@ -29,6 +29,7 @@ const produtos = [
         categoria: "Acabamento",
         preco: 289.90,
          imagem: "/assets/cimento.png"
+         
     }
 ];
 

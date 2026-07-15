@@ -3,31 +3,31 @@
 const categorias = [
     {
         nome: "Materiais",
-        imagem: "assets/categorias/material.png"
+        imagem: "../assets/materiais basicos.png"
     },
     {
         nome: "Acabamento",
-        imagem: "assets/categorias/acabamento.png"
+        imagem: "../assets/acabamento.png"
     },
     {
         nome: "Madeireira",
-        imagem: "assets/categorias/madeira.png"
+        imagem: "../assets/Madeireira.png"
     },
     {
         nome: "Hidráulica",
-        imagem: "assets/categorias/hidraulica.png"
+        imagem: "../assets/hidraulica.png"
     },
     {
         nome: "Elétrica",
-        imagem: "assets/categorias/eletrica.png"
+        imagem: "../assets/eletrica.png"
     },
     {
         nome: "Ferramentas",
-        imagem: "assets/categorias/ferramentas.png"
+        imagem: "../assets/ferramentas.png"
     },
     {
         nome: "Tintas",
-        imagem: "assets/categorias/tintas.png"
+        imagem: "../assets/tintas.png"
     }
 ];
 
@@ -36,41 +36,49 @@ const destaques = [
         badge: "Mais vendido",
         titulo: "Materiais básicos",
         descricao: "Vedação e assentamento",
+        imagem: "../assets/materiais basicos.png"
     },
     {
         badge: "Novidade",
         titulo: "Acabamento",
         descricao: "Revestimentos e pisos",
+        imagem: "../assets/acabamento.png"
     },
     {
         badge: "Premium",
         titulo: "Madeireira",
         descricao: "Tábuas e compensados",
+        imagem: "../assets/Madeireira.png"
     },
     {
         badge: "Oferta",
         titulo: "Hidráulica",
         descricao: "Tubos e conexões",
+        imagem: "../assets/hidraulica.png"
     },
     {
         badge: "Alto",
         titulo: "Elétrica",
         descricao: "Segurança e eficiência",
+        imagem: "../assets/eletrica.png"
     },
     {
         badge: "Top",
         titulo: "Ferramentas",
         descricao: "Corte e medição",
+        imagem: "../assets/ferramentas.png"
     },
     {
         badge: "Tendência",
         titulo: "Tintas",
         descricao: "Pintura e acabamento",
+        imagem: "../assets/tintas.png"
     },
     {
         badge: "Economia",
         titulo: "Kits",
         descricao: "Montagens inteligentes",
+        imagem: "../assets/kits.png"
     }
 ];
 
@@ -109,7 +117,11 @@ function renderDestaques() {
         container.innerHTML += `
             <div class="product-card">
 
-                <div class="product-image"></div>
+                <img
+                    src="${item.imagem}"
+                    alt="${item.titulo}"
+                    class="product-image"
+                >
 
                 <div class="product-content">
 
