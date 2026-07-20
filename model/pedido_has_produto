@@ -1,0 +1,115 @@
+const conexao = require("../conexao/conexao.js");
+
+// =========================
+// Cadastrar Pedidos_has_Produtos
+// =========================
+
+function cadastrar(pedidoProduto, callback) {
+
+    const sql = `INSERT INTO Pedidos_has_Produtos
+        (Pedidos_idPedidos, Produto_idProduto)
+        VALUES (?, ?)`;
+
+    conexao.query(
+        sql,
+        [
+            pedidoProduto.Pedidos_idPedidos,
+            pedidoProduto.Produto_idProduto
+        ],
+        callback
+    );
+
+}
+
+// =========================
+// Listar Pedidos_has_Produtos
+// =========================
+
+function listar(callback) {
+
+    const sql = `
+        SELECT * FROM Pedidos_has_Produtos
+    `;
+
+    conexao.query(sql, callback);
+
+}
+
+// =========================
+// Buscar por IDs
+// =========================
+
+function buscarPorId(Pedidos_idPedidos, Produto_idProduto, callback) {
+
+    const sql = `
+        SELECT *
+        FROM Pedidos_has_Produtos
+        WHERE Pedidos_idPedidos = ?
+        AND Produto_idProduto = ?
+    `;
+
+    conexao.query(
+        sql,
+        [Pedidos_idPedidos, Produto_idProduto],
+        callback
+    );
+
+}
+
+// =========================
+// Atualizar Pedidos_has_Produtos
+// =========================
+
+function atualizar(Pedidos_idPedidos, Produto_idProduto, pedidoProduto, callback) {
+
+    const sql = `
+        UPDATE Pedidos_has_Produtos
+        SET
+            Pedidos_idPedidos = ?,
+            Produto_idProduto = ?
+        WHERE Pedidos_idPedidos = ?
+        AND Produto_idProduto = ?
+    `;
+
+    conexao.query(
+        sql,
+        [
+            pedidoProduto.Pedidos_idPedidos,
+            pedidoProduto.Produto_idProduto,
+            Pedidos_idPedidos,
+            Produto_idProduto
+        ],
+        callback
+    );
+
+}
+
+// =========================
+// Excluir Pedidos_has_Produtos
+// =========================
+
+function excluir(Pedidos_idPedidos, Produto_idProduto, callback) {
+
+    const sql = `
+        DELETE FROM Pedidos_has_Produtos
+        WHERE Pedidos_idPedidos = ?
+        AND Produto_idProduto = ?
+    `;
+
+    conexao.query(
+        sql,
+        [Pedidos_idPedidos, Produto_idProduto],
+        callback
+    );
+
+}
+
+module.exports = {
+
+    cadastrar,
+    listar,
+    buscarPorId,
+    atualizar,
+    excluir
+
+};

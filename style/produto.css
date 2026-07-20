@@ -1,248 +1,513 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
+
+font-family:'Poppins',sans-serif;
+
+background:#f5f7fa;
+
+color:#222;
+
 }
+
 
 /* HEADER */
 
 .header{
-    background:#1f5ec7;
-    padding:12px 20px;
+
+background:white;
+
+height:80px;
+
+padding:0 6%;
+
+display:flex;
+
+align-items:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
 }
+
+
 
 .header-top{
-    max-width:1400px;
-    margin:auto;
 
-    display:flex;
-    align-items:center;
-    gap:20px;
+width:100%;
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
 }
+
+
 
 .logo img{
-    height:55px;
+
+width:180px;
+
 }
+
+
+
 
 .menu-btn,
 .icon-btn{
-    background:none;
-    border:none;
-    color:white;
-    cursor:pointer;
-    font-size:22px;
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+font-size:20px;
+
+color:#0b5ed7;
+
 }
+
+
 
 .search-box{
-    flex:1;
 
-    display:flex;
-    align-items:center;
-    background:white;
+flex:1;
 
-    border-radius:30px;
-    overflow:hidden;
+display:flex;
+
+height:45px;
+
+border:1px solid #ddd;
+
+border-radius:30px;
+
+overflow:hidden;
+
 }
+
+
 
 .search-box input{
-    width:100%;
-    border:none;
-    padding:12px 16px;
-    outline:none;
+
+flex:1;
+
+border:none;
+
+padding:0 20px;
+
+outline:none;
+
 }
+
+
 
 .search-box button{
-    border:none;
-    background:white;
-    width:50px;
-    cursor:pointer;
+
+width:55px;
+
+border:none;
+
+background:#0b5ed7;
+
+color:white;
+
 }
+
+
 
 .header-actions{
-    display:flex;
-    align-items:center;
-    gap:15px;
+
+display:flex;
+
+gap:15px;
+
 }
 
-.icon-btn span{
-    margin-left:5px;
-    font-size:14px;
+
+
+/* PRODUTO */
+
+
+.area-detalhes{
+
+max-width:1200px;
+
+margin:50px auto;
+
+padding:20px;
+
+display:flex;
+
+gap:60px;
+
+background:white;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
 }
-/* ==========================
-   FOOTER
-========================== */
+
+
+
+
+.area-imagens{
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+
+
+.img-lateral{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+
+.img-lateral img{
+
+width:75px;
+
+height:90px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+border:2px solid transparent;
+
+cursor:pointer;
+
+}
+
+
+
+.img-lateral img:hover{
+
+border-color:#0b5ed7;
+
+}
+
+
+
+
+
+.img-principal img{
+
+width:420px;
+
+height:420px;
+
+object-fit:contain;
+
+border-radius:20px;
+
+}
+
+
+
+
+
+/* TEXTO */
+
+
+.area-textos{
+
+flex:1;
+
+}
+
+
+
+.area-textos h1{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.avaliacoes-produtos{
+
+color:#ffc107;
+
+font-size:22px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.avaliacoes-produtos span{
+
+color:#555;
+
+font-size:15px;
+
+}
+
+
+
+#preço-antigo{
+
+text-decoration:line-through;
+
+color:#999;
+
+font-size:18px;
+
+}
+
+
+
+.preco-promocional{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin:15px 0;
+
+}
+
+
+
+#preco-promocional{
+
+font-size:35px;
+
+font-weight:700;
+
+color:#0b5ed7;
+
+}
+
+
+
+#desconto{
+
+background:#ff4d4d;
+
+color:white;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+}
+
+
+
+
+
+
+.quantidade{
+
+display:flex;
+
+gap:10px;
+
+margin:25px 0;
+
+}
+
+
+
+.quantidade button{
+
+width:40px;
+
+height:40px;
+
+border:none;
+
+background:#0b5ed7;
+
+color:white;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:20px;
+
+}
+
+
+
+#numero-quantidade{
+
+background:#eee;
+
+color:#222;
+
+}
+
+
+
+
+
+.bnt-add-carrinho button,
+.btn-comprar button{
+
+width:100%;
+
+height:55px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+margin-top:15px;
+
+}
+
+
+
+
+.bnt-add-carrinho button{
+
+background:#eef3ff;
+
+color:#0b5ed7;
+
+}
+
+
+
+.btn-comprar button{
+
+background:#0b5ed7;
+
+color:white;
+
+}
+
+
+
+
+
+.area-frete{
+
+margin-top:25px;
+
+}
+
+
+
+.area-frete input{
+
+height:45px;
+
+padding:10px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+}
+
+
+
+.area-frete button{
+
+height:45px;
+
+padding:0 20px;
+
+border:none;
+
+background:#0b5ed7;
+
+color:white;
+
+border-radius:10px;
+
+}
+
+
+
+/* FOOTER */
+
 
 .footer{
-    background:#08111f;
-    color:#fff;
-    margin-top:60px;
+
+background:#08111f;
+
+color:white;
+
+margin-top:60px;
+
 }
+
 
 .footer-container{
-    max-width:1400px;
-    margin:auto;
 
-    display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(250px,1fr));
+padding:50px;
 
-    gap:40px;
+display:grid;
 
-    padding:50px 20px;
-}
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-.footer-column h3{
-    margin-bottom:20px;
-    font-size:18px;
-}
-
-.footer-column p{
-    color:#c7c7c7;
-    line-height:1.7;
-}
-
-.footer-column ul{
-    list-style:none;
-}
-
-.footer-column ul li{
-    margin-bottom:12px;
-    color:#c7c7c7;
-}
-
-.footer-column ul li a{
-    text-decoration:none;
-    color:#c7c7c7;
-    transition:.3s;
-}
-
-.footer-column ul li a:hover{
-    color:#fff;
-}
-
-.footer-column i{
-    margin-right:8px;
-}
-
-.social-links{
-    display:flex;
-    gap:15px;
-}
-
-.social-links a{
-    width:45px;
-    height:45px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#1f5ec7;
-
-    border-radius:50%;
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-}
-
-.social-links a:hover{
-    transform:translateY(-4px);
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.1);
-
-    text-align:center;
-
-    padding:20px;
-}
-
-.footer-bottom p{
-    color:#b8b8b8;
-    font-size:14px;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-    .footer-container{
-        gap:30px;
-    }
-
-    .footer-column{
-        text-align:center;
-    }
-
-    .social-links{
-        justify-content:center;
-    }
+gap:30px;
 
 }
 
 
 
 
-/* Galeria */
+@media(max-width:900px){
 
-.area-detalhes {
 
-    max-width: 1200px;
-    /*tamanho maximo da alargura da area*/
-    margin: 50px auto;
-    /*margem de espaçamento, distanciar as imagens da borda da tela*/
-    padding: 20px;
-    /*serve para separar os elementos de perto das bordas da div*/
-    display: flex;
-    /*permitir que as imagens fiquem uma embaixo da outra ou uma do lado da outra*/
-    gap: 50px
-    /*e a distancia entre uma imagem a outra*/
+.area-detalhes{
+
+flex-direction:column;
 
 }
 
-.area-imagens {
-    display:flex;
-    gap : 20px;
-    /*e a distancia as tags dentro da div*/
-}
 
-.img-lateral {
-    display: flex;
-    flex-direction: column;
-    /*deixa as imagens uma embaixo da outra*/
-    gap: 15px;
-    /*e a distância entre uma minatura e outra*/
-}
+.area-imagens{
 
-.img-lateral {
-    width: 70px;/*largura da área laterais*/
-    height: 90px;/*largura da área lateral*/
-    object-fit: cover;/*redimenciona a imagem para caber na área*/
-    border: 2px solid transparent;/*bordas ao redor da área*/
-    border-radius: 10px;/*arredondar as bordas*/
-    cursor: pointer;/*alterar o curso para a mão*/
-    transition: 0.3s;/*colocar efeito de transição*/
+justify-content:center;
 
 }
 
-.img-lateral:hover {
-   border-color:#1f5ec7;
-   /*adicionar borda ao passar o mouse pela imagem*/ 
+
+.img-principal img{
+
+width:300px;
+
+height:300px;
+
 }
 
-.img-principal img {
-    width: 420px;
-    /*tamanho da imagem principal*/
-    border-radius: 15px;
-    /*arredondar a imagem principal*/
-    box-shadow: 0 5px 15px rgba(0, 0, 0,  .1);
-    /*adicionar sombra à imagem principal*/
+
 }

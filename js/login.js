@@ -1,228 +1,71 @@
-/*
-==================================================
-DADOS DA APLICAÇÃO
-==================================================
-*/
+const senha = document.querySelector("#senha");
 
-const app = {
-    empresa: "Zernman Construções",
-    ano: "2026",
+const mostrar = document.querySelector("#mostrarSenha");
 
-    logo: "../assets/logo.png",
 
-    linksFooter: [
-        "Materiais de construção",
-        "Madeiras",
-        "Acabamento",
-        "Ferramentas",
-        "Privacidade",
-        "Termos",
-        "Suporte"
-    ]
-};
 
-/*
-==================================================
-HEADER
-==================================================
-*/
+mostrar.addEventListener("click",()=>{
 
-document.getElementById("header").innerHTML = `
-<div class="header">
 
-    <div class="logo-header">
-        <img src="${app.logo}" alt="Logo">
-        <span>${app.empresa}</span>
-    </div>
+if(senha.type === "password"){
 
-</div>
-`;
 
-/*
-==================================================
-MAIN
-==================================================
-*/
+senha.type="text";
 
-document.getElementById("main-content").innerHTML = `
 
-<div class="login-container">
+mostrar.innerHTML=
+'<i class="fa-solid fa-eye-slash"></i>';
 
-    <!-- LOGIN -->
 
-    <section class="section-card">
+}else{
 
-        <div class="logo-side">
-            <img src="${app.logo}" alt="Logo">
-        </div>
 
-        <div class="form-side">
+senha.type="password";
 
-            <h2>Acesse sua conta</h2>
 
-            <p>
-                Bem-vindo de volta. Faça login para consultar produtos,
-                preços e pedidos.
-            </p>
+mostrar.innerHTML=
+'<i class="fa-solid fa-eye"></i>';
 
-            <form>
 
-                <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email">
-                </div>
+}
 
-                <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password">
-                </div>
 
-                <button class="btn btn-dark">
-                    Entrar
-                </button>
+});
 
-            </form>
 
-        </div>
 
-    </section>
 
-    <!-- CADASTRO -->
 
-    <section class="section-card">
+const formulario = document.querySelector("form");
 
-        <div class="logo-side">
-            <img src="${app.logo}" alt="Logo">
-        </div>
 
-        <div class="form-side">
 
-            <h2>Crie sua conta</h2>
+formulario.addEventListener("submit",(e)=>{
 
-            <p>
-                Crie uma conta para consultar produtos,
-                preços e pedidos.
-            </p>
 
-            <form>
+e.preventDefault();
 
-                <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email">
-                </div>
 
-                <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password">
-                </div>
 
-                <button class="btn btn-outline">
-                    Criar conta
-                </button>
+const email =
+document.querySelector("#email").value;
 
-            </form>
 
-        </div>
 
-    </section>
+if(email === ""){
 
-    <!-- OPÇÕES -->
 
-    <section class="options-section">
+alert("Digite seu e-mail");
 
-        <div>
 
-            <h2>Acesso e opções</h2>
+return;
 
-            <p>
-                Recupere sua conta e altere preferências.
-            </p>
+}
 
-        </div>
 
-        <div class="option-card">
 
-            <h3>Esqueci minha senha</h3>
+alert("Login realizado com sucesso!");
 
-            <p>
-                Enviaremos um link de redefinição para seu e-mail.
-            </p>
 
-            <button class="btn btn-outline">
-                Recuperar acesso
-            </button>
 
-        </div>
-
-    </section>
-
-    <!-- LOGIN SOCIAL -->
-
-    <section class="social-section">
-
-        <div class="social-title">
-            <h2>Entrar com</h2>
-            <p>
-                Utilize sua conta Google ou Apple.
-            </p>
-        </div>
-
-        <div class="social-grid">
-
-            <div class="social-card">
-
-                <img
-                src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
-                alt="Google">
-
-                <h4>Google</h4>
-
-            </div>
-
-            <div class="social-card">
-
-                <img
-                src="https://cdn-icons-png.flaticon.com/512/0/747.png"
-                alt="Apple">
-
-                <h4>Apple</h4>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</div>
-`;
-
-/*
-==================================================
-FOOTER
-==================================================
-*/
-
-document.getElementById("footer").innerHTML = `
-
-<div class="footer">
-
-    <div class="footer-links">
-
-        ${app.linksFooter
-            .map(link => `<a href="#">${link}</a>`)
-            .join("")
-        }
-
-    </div>
-
-    <p>
-        ${app.empresa} © ${app.ano}
-    </p>
-
-    <p>
-        Construindo com tecnologia e confiança.
-    </p>
-
-</div>
-
-`;
+});

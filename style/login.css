@@ -1,215 +1,434 @@
-/* RESET */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#ffffff;
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fa;
+
     color:#222;
+
 }
 
-/* HEADER */
 
-.header{
-    border-bottom:1px solid #ddd;
-    padding:15px 30px;
-}
 
-.logo-header{
+/* ================= HEADER ================= */
+
+
+.topo{
+
+    height:80px;
+
+    background:white;
+
     display:flex;
+
     align-items:center;
-    gap:10px;
+
+    justify-content:space-between;
+
+    padding:0 8%;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
 }
 
-.logo-header img{
-    width:30px;
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
 }
 
-/* MAIN */
+
+
+.logo img{
+
+    width:180px;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+
+
+.topo a{
+
+    text-decoration:none;
+
+    color:#0b5ed7;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+
+/* ================= LOGIN ================= */
+
+
+
+.login-area{
+
+    min-height:calc(100vh - 160px);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:50px 0;
+
+}
+
+
+
+
 
 .login-container{
-    max-width:1200px;
-    margin:auto;
-    padding:40px 20px;
-}
 
-.section-card{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+    width:90%;
 
-    padding:50px;
-    border-bottom:1px solid #e5e5e5;
-}
+    max-width:1000px;
 
-/* LOGO */
-
-.logo-side{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.logo-side img{
-    width:180px;
-}
-
-/* FORMULÁRIOS */
-
-.form-side h2{
-    font-size:2rem;
-    margin-bottom:15px;
-}
-
-.form-side p{
-    color:#666;
-    margin-bottom:25px;
-    font-size:.95rem;
-}
-
-.form-group{
-    margin-bottom:20px;
-}
-
-.form-group label{
-    display:block;
-    margin-bottom:8px;
-    font-size:.9rem;
-}
-
-.form-group input{
-    width:100%;
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:5px;
-}
-
-.btn{
-    width:100%;
-    padding:14px;
-    border:none;
-    cursor:pointer;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-.btn-dark{
-    background:#111;
-    color:white;
-}
-
-.btn-outline{
     background:white;
-    border:1px solid #222;
-}
 
-/* OPÇÕES */
+    border-radius:25px;
 
-.options-section{
+    overflow:hidden;
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:30px;
-    padding:50px;
-    border-bottom:1px solid #e5e5e5;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+
 }
 
-.option-card{
-    border:1px solid #ddd;
-    padding:20px;
-}
 
-.option-card h3{
-    margin-bottom:10px;
-}
 
-/* LOGIN SOCIAL */
 
-.social-section{
-    padding:50px;
-}
 
-.social-title{
-    margin-bottom:30px;
-}
 
-.social-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-}
+/* ================= LADO DA LOGO ================= */
 
-.social-card{
-    text-align:center;
-}
 
-.social-card img{
-    width:60px;
-    margin-bottom:10px;
-}
+.login-imagem{
 
-/* FOOTER */
+    background:
 
-.footer{
-    border-top:1px solid #ddd;
-    text-align:center;
-    padding:25px;
-}
+    linear-gradient(
+    135deg,
+    #0b5ed7,
+    #3d8bfd
+    );
 
-.footer-links{
+    color:white;
+
     display:flex;
+
+    align-items:center;
+
     justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
+
+    text-align:center;
+
+    padding:50px;
+
 }
 
-.footer-links a{
+
+
+.login-imagem img{
+
+    width:260px;
+
+    max-width:100%;
+
+    margin-bottom:25px;
+
+    object-fit:contain;
+
+}
+
+
+
+.login-imagem p{
+
+    margin-top:15px;
+
+    font-size:17px;
+
+}
+
+
+
+
+
+
+/* ================= FORMULARIO ================= */
+
+
+
+.login-box{
+
+    padding:50px;
+
+}
+
+
+
+.login-box h2{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.login-box p{
+
+    color:#777;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+label{
+
+    display:block;
+
+    font-weight:500;
+
+    margin-bottom:8px;
+
+}
+
+
+
+
+
+.campo{
+
+    height:50px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.campo i{
+
+    color:#0b5ed7;
+
+    margin-right:10px;
+
+}
+
+
+
+.campo input{
+
+    border:none;
+
+    outline:none;
+
+    flex:1;
+
+    font-size:15px;
+
+}
+
+
+
+.campo button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#777;
+
+}
+
+
+
+
+
+
+/* ================= LINKS ================= */
+
+
+
+.esqueci{
+
+    display:block;
+
+    text-align:right;
+
     text-decoration:none;
-    color:#444;
-}
 
-/* RESPONSIVO */
+    color:#0b5ed7;
 
-@media(max-width:900px){
+    font-size:14px;
 
-    .section-card{
-        grid-template-columns:1fr;
-        padding:30px;
-    }
-
-    .options-section{
-        grid-template-columns:1fr;
-        padding:30px;
-    }
-
-    .social-grid{
-        grid-template-columns:1fr;
-    }
-
-    .logo-side img{
-        width:130px;
-    }
-
-    .form-side h2{
-        font-size:1.6rem;
-    }
+    margin-bottom:25px;
 
 }
 
-@media(max-width:500px){
 
-    .header{
-        padding:15px;
-    }
 
-    .section-card,
-    .options-section,
-    .social-section{
-        padding:20px;
-    }
+
+
+
+/* ================= BOTAO ================= */
+
+
+.entrar{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0b5ed7;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.entrar:hover{
+
+    background:#084298;
+
+}
+
+
+
+
+
+
+
+.cadastro{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#666;
+
+}
+
+
+
+.cadastro a{
+
+    color:#0b5ed7;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+
+/* ================= RESPONSIVO ================= */
+
+
+@media(max-width:800px){
+
+
+.login-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.login-imagem{
+
+    display:none;
+
+}
+
+
+.login-box{
+
+    padding:30px;
+
+}
+
 
 }

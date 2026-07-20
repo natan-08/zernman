@@ -1,110 +1,304 @@
-// CRIANDO VARIÁVEIS
+// ================================
+// DADOS DO PRODUTO ZERNMAN
+// ================================
 
-let preco_promocional = 85.43;
-let preco_antigo = 120.50;
-let desconto = "-15%";
-let quantidade = 6;
-let favorito = false;
 
-const nomeProduto = "Cimento";
-const tamanho = ["P", "M", "G", "GG"];
-const cores = ["ROSA", "VERDE", "PRETO"];
-const avaliacoes = 4.5;
+const produto = {
 
-const img_miniaturas = [
-    "../assets/cimento.png",
-    "../assets/parede.png"
-];
+nome: "Furadeira de Impacto Bosch GSB 550",
 
-const img_principal = "/assets/parede.png";
+preco: 379.90,
 
-const descricao = "Confeccionado em tecido macio, com excelente elasticidade e toque suave, o conjunto proporciona ajuste perfeito ao corpo.";
+precoAntigo: 499.90,
 
-let frete;
+desconto: "-20%",
 
-// BOTÕES E ARQUIVOS
+avaliacao: 4.8,
 
-let btn_add_carrinho;
-let btn_comprar;
-let btn_add_quantidade;
-let btn_remover_quantidade;
-let btn_calcular_frete;
+estoque: 10,
 
-// ========================================
-// PREENCHER IMAGENS
-// ========================================
+imagens:[
 
-const lateral = document.getElementById("img-lateral");
+"../assets/produtos/furadeira.png",
 
-img_miniaturas.forEach(imagem => {
+"../assets/produtos/furadeira2.png"
 
-    const img = document.createElement("img");
+],
 
-    img.src = imagem;
+descricao:
 
-    img.addEventListener("click", () => {
-        document.getElementById("imagem-maior").src = imagem;
-    });
+"Ferramenta profissional de alta qualidade para serviços de construção, reformas e manutenção."
 
-    lateral.appendChild(img);
+};
 
-});
 
-document.getElementById("imagem-maior").src = img_principal;
 
-// ========================================
-// PREENCHER DADOS DO PRODUTO
-// ========================================
 
-document.getElementById("nome-produto").textContent = nomeProduto;
 
-// NO HTML O ID ESTÁ ASSIM:
-document.getElementById("valor-avaliacão").textContent = avaliacoes;
+// ================================
+// ELEMENTOS
+// ================================
 
-// NO HTML O ID ESTÁ ASSIM:
-document.getElementById("preço-antigo").textContent = preco_antigo;
 
-document.getElementById("preco-promocional").textContent = preco_promocional;
+const imagemPrincipal =
+document.querySelector("#imagem-maior");
 
-document.getElementById("desconto").textContent = desconto;
 
-// ========================================
-// QUANTIDADE DE PRODUTOS
-// ========================================
+const lateral =
+document.querySelector("#img-lateral");
 
-let quantidade_inicial = 1;
 
-btn_add_quantidade = document.getElementById("aumentar");
-btn_remover_quantidade = document.getElementById("diminuir");
 
-const numero = document.getElementById("numero-quantidade");
 
-numero.textContent = quantidade_inicial;
 
-// AUMENTAR
+// ================================
+// GALERIA DE IMAGENS
+// ================================
 
-btn_add_quantidade.addEventListener("click", () => {
 
-    if (quantidade_inicial < quantidade) {
-        quantidade_inicial++;//aumentar de 1 em 1
-        numero.textContent = quantidade_inicial;
-    }else {
-        alert("voce atingiu o limite de estoque");
-    }
+produto.imagens.forEach((imagem)=>{
+
+
+const img = document.createElement("img");
+
+
+img.src = imagem;
+
+
+img.alt = produto.nome;
+
+
+
+img.addEventListener("click",()=>{
+
+
+imagemPrincipal.src = imagem;
+
 
 });
 
-// DIMINUIR
 
-btn_remover_quantidade.addEventListener("click", () => {
 
-    if (quantidade_inicial > 0) {
+lateral.appendChild(img);
 
-        quantidade_inicial--;//diminuir de 1 em 1
 
-        numero.textContent = quantidade_inicial;
 
-    }
+});
 
-    });
 
+
+imagemPrincipal.src = produto.imagens[0];
+
+
+
+
+
+
+// ================================
+// INFORMAÇÕES DO PRODUTO
+// ================================
+
+
+document.querySelector("#nome-produto")
+.textContent = produto.nome;
+
+
+
+
+document.querySelector("#valor-avaliacao")
+.textContent = produto.avaliacao;
+
+
+
+
+document.querySelector("#preco-antigo")
+.textContent =
+
+"R$ " + produto.precoAntigo
+.toFixed(2)
+.replace(".",",");
+
+
+
+
+
+document.querySelector("#preco-promocional")
+.textContent =
+
+"R$ " + produto.preco
+.toFixed(2)
+.replace(".",",");
+
+
+
+
+
+document.querySelector("#desconto")
+.textContent = produto.desconto;
+
+
+
+
+
+
+
+
+// ================================
+// QUANTIDADE
+// ================================
+
+
+let quantidade = 1;
+
+
+
+const numeroQuantidade =
+
+document.querySelector("#numero-quantidade");
+
+
+
+document.querySelector("#aumentar")
+.addEventListener("click",()=>{
+
+
+if(quantidade < produto.estoque){
+
+
+quantidade++;
+
+
+numeroQuantidade.textContent = quantidade;
+
+
+}else{
+
+
+alert("Limite de estoque atingido");
+
+
+}
+
+
+});
+
+
+
+
+
+
+document.querySelector("#diminuir")
+.addEventListener("click",()=>{
+
+
+if(quantidade > 1){
+
+
+quantidade--;
+
+
+numeroQuantidade.textContent = quantidade;
+
+
+}
+
+
+});
+
+
+
+
+
+
+
+// ================================
+// CARRINHO
+// ================================
+
+
+document.querySelector("#btn-add-carrinho")
+.addEventListener("click",()=>{
+
+
+alert(
+
+produto.nome +
+
+" foi adicionado ao carrinho!"
+
+);
+
+
+});
+
+
+
+
+
+
+
+// ================================
+// COMPRAR AGORA
+// ================================
+
+
+document.querySelector("#btn-comprar")
+.addEventListener("click",()=>{
+
+
+window.location.href="finalizar-compra.html";
+
+
+});
+
+
+
+
+
+
+
+// ================================
+// FRETE
+// ================================
+
+
+document.querySelector("#btn-calcular-frete")
+.addEventListener("click",()=>{
+
+
+const cep =
+
+document.querySelector("#frete").value;
+
+
+
+const resultado =
+
+document.querySelector("#resultado-frete");
+
+
+
+
+if(cep.length < 8){
+
+
+resultado.textContent =
+"Digite um CEP válido.";
+
+
+return;
+
+
+}
+
+
+
+
+resultado.textContent =
+
+"Frete calculado: R$ 25,00 - Entrega em até 5 dias úteis.";
+
+
+
+
+});

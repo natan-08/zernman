@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Finalizar Compra | Zernman</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../style/finalizar_compra.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<header class="topo">
+
+
+<div class="logo">
+
+<img src="../assets/logo.png" alt="Zernman">
+
+</div>
+
+
+<nav>
+
+<a href="../index.html">Home</a>
+
+<a href="tela-produto.html">Produtos</a>
+
+<a href="carrinho.html">Carrinho</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="etapas">
+
+
+<div class="etapa ativo">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Carrinho</span>
+
+</div>
+
+
+<div class="etapa ativo">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Identificação</span>
+
+</div>
+
+
+<div class="etapa ativo">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<span>Pagamento</span>
+
+</div>
+
+
+<div class="etapa">
+
+<i class="fa-solid fa-check"></i>
+
+<span>Confirmação</span>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<main class="checkout">
+
+
+<div class="container">
+
+
+
+
+
+<section class="dados">
+
+
+
+<div class="card">
+
+
+<h2>
+<i class="fa-solid fa-user"></i>
+Dados do cliente
+</h2>
+
+
+
+<div class="campo">
+
+<label>Nome completo</label>
+
+<input 
+id="nome"
+type="text"
+placeholder="Digite seu nome">
+
+
+</div>
+
+
+
+
+<div class="linha">
+
+
+<div class="campo">
+
+<label>CPF</label>
+
+<input 
+id="cpf"
+placeholder="000.000.000-00">
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>Telefone</label>
+
+<input
+id="telefone"
+placeholder="(00) 00000-0000">
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>E-mail</label>
+
+<input
+id="email"
+type="email"
+placeholder="Digite seu e-mail">
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+<i class="fa-solid fa-location-dot"></i>
+Endereço de entrega
+</h2>
+
+
+
+
+<div class="linha">
+
+
+<div class="campo">
+
+<label>CEP</label>
+
+<input
+id="cep"
+placeholder="00000-000">
+
+
+</div>
+
+
+
+<div class="campo">
+
+<label>Número</label>
+
+<input
+id="numero"
+placeholder="Número">
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="campo">
+
+<label>Rua</label>
+
+<input
+id="rua"
+placeholder="Rua">
+
+
+</div>
+
+
+
+
+
+<div class="linha">
+
+
+<div class="campo">
+
+<label>Bairro</label>
+
+<input
+id="bairro"
+placeholder="Bairro">
+
+
+</div>
+
+
+
+<div class="campo">
+
+<label>Cidade</label>
+
+<input
+id="cidade"
+placeholder="Cidade">
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>Estado</label>
+
+<input
+id="estado"
+placeholder="Estado">
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+<i class="fa-solid fa-wallet"></i>
+Forma de pagamento
+</h2>
+
+
+
+
+<label class="pagamento">
+
+
+<input 
+type="radio"
+name="pagamento"
+value="Pix"
+checked>
+
+
+<i class="fa-brands fa-pix"></i>
+
+Pix
+
+
+</label>
+
+
+
+
+
+
+<label class="pagamento">
+
+
+<input 
+type="radio"
+name="pagamento"
+value="Cartão">
+
+
+<i class="fa-solid fa-credit-card"></i>
+
+Cartão de crédito
+
+
+</label>
+
+
+
+
+
+
+<label class="pagamento">
+
+
+<input 
+type="radio"
+name="pagamento"
+value="Boleto">
+
+
+<i class="fa-solid fa-barcode"></i>
+
+Boleto
+
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<aside class="resumo">
+
+
+<h2>
+Resumo do pedido
+</h2>
+
+
+
+
+<div class="produto-resumo">
+
+
+<img src="../imagens/produtos/furadeira.png">
+
+
+
+<div>
+
+<h3>
+Furadeira de Impacto Bosch GSB 550
+</h3>
+
+
+<p>
+Quantidade: 1
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="linha-total">
+
+<span>Subtotal</span>
+
+<strong>
+R$ 379,90
+</strong>
+
+</div>
+
+
+
+
+<div class="linha-total">
+
+<span>Frete</span>
+
+<strong>
+R$ 25,00
+</strong>
+
+</div>
+
+
+
+
+
+<div class="linha-total">
+
+<span>Desconto</span>
+
+<strong>
+R$ 0,00
+</strong>
+
+</div>
+
+
+
+
+
+
+<div class="total">
+
+
+<span>Total</span>
+
+
+<h2>
+R$ 404,90
+</h2>
+
+
+</div>
+
+
+
+
+
+<button id="finalizar">
+
+Finalizar Pedido
+
+<i class="fa-solid fa-arrow-right"></i>
+
+
+</button>
+
+
+
+</aside>
+
+
+
+
+
+</div>
+
+</main>
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 Zernman - Materiais para Construção
+</p>
+
+</footer>
+
+
+
+
+
+<script src="../js/finalizar_compra.js"></script>
+
+
+</body>
+
+</html>
